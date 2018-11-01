@@ -26,6 +26,14 @@ namespace PracticaConsultorio
 
             this.paciente = paciente;
 
+            lblNombrePaciente.Text = paciente.Nombre;
+
+            foreach(Consulta consulta in Datos.consultas)
+            {
+                var nuevoElementoConsulta = new ElementoConsultaControl(consulta);
+                stckHistorialPanelConsultas.Children.Add(nuevoElementoConsulta);
+            }
+
         }
 
     }
